@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd">
+
+    
+    <testsuites>
+        <testsuite name="Project Test Mini">
+                <file>tests/MiniTest.php</file>
+        </testsuite>
+	<testsuite name="Project Test Suite">
+                <file>tests/PoneysTest.php</file>
+        </testsuite>
+    </testsuites>    
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+	<const name="tailleChamp" value="15"/>
+	<const name="quantitePoneys" value="8"/>
+    </php>
+    
+    <logging>
+  	<log type="junit" target="/tmp/logfile.xml"/>
+    </logging>
+</phpunit>
